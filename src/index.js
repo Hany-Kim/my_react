@@ -1,3 +1,3 @@
-// 예약어는 변수명으로 사용 불가
-let var;
-let if;
+// camel 표기볍을 통한 가독성 향상
+let userInfo;
+let isTrueOrFalse;
