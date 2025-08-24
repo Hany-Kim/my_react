@@ -1,4 +1,3 @@
-let 1st; // 오류
-
-let user1;
-let test123ing;
+// 예약어는 변수명으로 사용 불가
+let var;
+let if;
