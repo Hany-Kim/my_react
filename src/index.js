@@ -1,9 +1,3 @@
-// 변수 : 변하는 값을 저장하는 저장소
-let phone1 = "samsung";
-phone1 = "apple";
-console.log(phone1);
-
-// 상수 : 변하지 않는 값을 저장하는 저장소
-const phone2 = "samsung";
-phone2 = "apple"; // 오류
-console.log(phone2);
+const birthday = "12-21";
+const name = "hans";
+const EMAIL_ADDRESS = "123@gmail.com"; // 별칭을 상수형태로 저장
