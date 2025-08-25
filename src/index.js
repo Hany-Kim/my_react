@@ -1,23 +1,8 @@
-// 원시 타입 자료형 - 숫자형
+// 원시 타입 자료형 - BigInt
+// 2^53-1보다 크거나 -(2^53-1)보다 작은 값 = 숫자형으로 표현되지 않는 값
 
-let num1 = 125;
-let num2 = 10.00012;
+let bigNum1 = 9999999999999999999999999999n;
+let bigNum2 = BigInt("9999999999999999999999999999");
 
-console.log(typeof num1); // number
-console.log(typeof num2); // number
-
-// Infinity
-let num = Infinity; // 무한대
-console.log(typeof num); // number
-
-let inf = 100 / 0; // 어떤 수에 0을 나누면 무한대
-console.log(inf); // Infinity
-
-// NaN : Not a Number
-let number = NaN;
-console.log(typeof number); // number
-
-let nan = "javascript" / 10;
-console.log(nan); // NaN
-
-// 잘못된 연산이라도 Infinity와 NaN으로 표시되기 때문에, JS의 숫자연산은 '안전하다'
+console.log(typeof bigNum1); // bigint
+console.log(typeof bigNum2); // bigint
