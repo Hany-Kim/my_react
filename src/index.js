@@ -1,12 +1,14 @@
-// 증감 연산자
+// 대입 연산자
+
+let num = 10;
+num = num + 5;
+
+console.log(num); // 15
+
+// 복합 대입 연산자 : 산술 연산자 + 대입 연산자
+// +=, -=, *=, /=, %=
 
 let num1 = 10;
-let num2 = 5;
+num1 += 5;
 
-console.log(num1++); // 10
-console.log(num1); // 11
-console.log(++num1); // 12
-
-console.log(num2--); // 5
-console.log(num2); // 4
-console.log(--num2); // 3
+console.log(num1); // 15
