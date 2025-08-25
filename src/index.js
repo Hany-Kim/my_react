@@ -1,5 +1,7 @@
-// 원시 타입 자료형 - Undefined
-// 변수에 값이 할당되지 않은 상태
+// 묵시적 형 변환
 
-let num;
-console.log(typeof num); // undefiend
+let num1 = "15";
+let num2 = 5;
+
+console.log(num1 / num2); // 문자형을 숫자형으로 나누고 있지만 '3'이 출력된다.
+// JS가 +를 제외한 사칙연산시 자동으로 형변환을 진행한다.
