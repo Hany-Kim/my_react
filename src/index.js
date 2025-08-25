@@ -1,8 +1,9 @@
-// 원시 타입 자료형 - BigInt
-// 2^53-1보다 크거나 -(2^53-1)보다 작은 값 = 숫자형으로 표현되지 않는 값
+// 원시 타입 자료형 - string
 
-let bigNum1 = 9999999999999999999999999999n;
-let bigNum2 = BigInt("9999999999999999999999999999");
+let name = "hans";
+console.log(typeof name); // string
 
-console.log(typeof bigNum1); // bigint
-console.log(typeof bigNum2); // bigint
+// 템플릿 리터럴 - 백틱을 사용하면 ${}을 사용 가능
+let intro = `제 이름은 ${name} 입니다.`;
+
+console.log(intro); // 제 이름은 hans 입니다.
