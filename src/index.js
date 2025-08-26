@@ -1,10 +1,7 @@
-// null 병합 연산자
-// A ?? B
-// A가 null이거나 undefined인 경우 B반환
-// A가 null과 undefined가 아닌 경우 A반환
+// 삼항 연산자
+// A ? B : C
 
-let num1;
-let num2 = 10;
+let num = 100;
+let result = num % 2 === 0 ? "짝수" : "홀수";
 
-console.log(num1 ?? 20); // 20, num1 = undefined
-console.log(num2 ?? 20); // 10
+console.log(result);
