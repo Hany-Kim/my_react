@@ -1,23 +1,10 @@
-// 논리 연산자
-// true false
-// NOT OR AND
+// null 병합 연산자
+// A ?? B
+// A가 null이거나 undefined인 경우 B반환
+// A가 null과 undefined가 아닌 경우 A반환
 
-// NOT
-// false -> true, true -> false
-let isClicked = true;
-let isOpened = false;
+let num1;
+let num2 = 10;
 
-console.log(!isClicked); // false
-console.log(!isOpened); // true
-
-// OR
-console.log(true || true); // true
-console.log(true || false); // true
-console.log(false || true); // true
-console.log(false || false); // false
-
-// AND
-console.log(true && true); // true
-console.log(true && false); // false
-console.log(false && true); // false
-console.log(false && false); // false
+console.log(num1 ?? 20); // 20, num1 = undefined
+console.log(num2 ?? 20); // 10
