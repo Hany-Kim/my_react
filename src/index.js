@@ -1,7 +1,11 @@
-// 삼항 연산자
-// A ? B : C
+// if문
 
-let num = 100;
-let result = num % 2 === 0 ? "짝수" : "홀수";
+let num = 50;
 
-console.log(result);
+if (num < 10) {
+  console.log("num은 10보다 작습니다.");
+} else if (num > 10) {
+  console.log("num은 10보다 큽니다.");
+} else {
+  console.log("num은 10입니다.");
+}
