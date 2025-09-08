@@ -1,13 +1,13 @@
-function print() {
-  console.log(1);
-  console.log(2);
+// 스코프 - 전역, 지역
+
+let globalNum = 100; // 전역 스코프
+
+function testFunc() {
+  let innerNum = 50; // 지역 스코프
+  console.log(globalNum);
+  console.log(innerNum);
 }
 
-console.log(3);
-print();
-console.log(4);
-
-// 3
-// 1
-// 2
-// 4
+testFunc();
+console.log(globalNum);
+console.log(innerNum); // Uncaught ReferenceError: innerNum is not defined at index.js:13:13
