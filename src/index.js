@@ -1,10 +1,11 @@
-// 블록 스코프
+// 함수 스코프
 
 function print() {
-  for (let i = 0; i < 10; i++) {
+  // var는 let과 다르게 함수스코프를 가짐
+  for (var i = 0; i < 10; i++) {
     console.log(i);
   }
-  console.log(i); // Uncaught ReferenceError: i is not defined at print (index.js:7:15) at index.js:10:1
+  console.log(i); // 10 출력 (오류발생x)
 }
 
 print();
