@@ -1,20 +1,7 @@
-// switch case
-
-let fruit = "apple";
-
-switch (fruit) {
-  case "banana":
-    console.log("바나나");
-    break;
-  case "orange":
-    console.log("오렌지");
-    break;
-  case "apple":
-    console.log("사과");
-    break;
-  case "grape":
-    console.log("포도");
-    break;
-  default:
-    console.log("다른 과일");
+function add(num1, num2) {
+  return num1 + num2;
+  console.log("함수 호출"); // 출력되지 않음.
 }
+
+let result = add(10, 15);
+console.log(`두 숫자를 더한 결과는 ${result} 입니다.`);
