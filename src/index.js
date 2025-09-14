@@ -1,12 +1,13 @@
-// 화살표 함수 장점
+// 콜백 함수 : 다른 함수의 매개변수로 넘겨준 함수
 
-// 익명 함수
-const add1 = function (a, b) {
-  return a + b;
+const printResult = (a, b) => {
+  let result = a + b;
+  console.log("결과: " + result);
+};
+const doubleResult = (a, b) => {
+  let result = a + b;
+  console.log("결과에 2를 곱한 값: " + result * 2);
 };
 
-// 화살표 함수 : 함수를 간단하게 작성할 수 있다는 장점이 있다.
-const add2 = (a, b) => a + b;
-
-console.log(add1(10, 20)); // 30
-console.log(add2(10, 20)); // 30
+printResult(5, 3);
+doubleResult(5, 3);
