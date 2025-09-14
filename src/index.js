@@ -1,15 +1,12 @@
-// 함수 선언식 vs 함수 표현식 - 호이스팅
+// 화살표 함수 장점
 
-// 함수 선언식 : 호이스팅으로 정상 동작
-hoisted1();
-
-function hoisted1() {
-  console.log("hoisting");
-} // hoisting 출력
-
-// 함수 표현식 : hoisted2라는 변수에 함수를 할당하는 형태, const 변수의 경우 선언시점에 TDZ에 올라가 있기때문에, 호이스팅되지 않는다.
-hoisted2(); // index.js:11 Uncaught ReferenceError: Cannot access 'hoisted2' before initialization at index.js:11:1
-
-const hoisted2 = function () {
-  console.log("hoisting");
+// 익명 함수
+const add1 = function (a, b) {
+  return a + b;
 };
+
+// 화살표 함수 : 함수를 간단하게 작성할 수 있다는 장점이 있다.
+const add2 = (a, b) => a + b;
+
+console.log(add1(10, 20)); // 30
+console.log(add2(10, 20)); // 30
