@@ -12,3 +12,8 @@ console.log(car.color);
 // 괄호 표기법
 console.log(car["name"]);
 console.log(car["color"]);
+
+const getValue = (key) => {
+  console.log(car[key]);
+};
+getValue("color");
