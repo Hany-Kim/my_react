@@ -1,15 +1,26 @@
-// 배열 삭제
-const colors = ["purple", "skyblue", "green"];
-colors.pop(); // -> 뒤에서 삭제
+// 생성자 함수
+// 특징 : new 키워드를 사용항
 
-console.log(colors); // (2) ['purple', 'skyblue']
+let obj = new Object();
+let arr = new Array();
 
-colors.shift(); // -> 앞에서 삭제
-
-console.log(colors); // ['skyblue']
-
-const colors1 = ["purple", "skyblue", "green", "yellow", "orange"];
-// colors1.splice(start, deleteCnt);
-colors1.splice(1, 3);
-console.log(colors1); // ['purple', 'orange']
-console.log(colors1.length); // 2
+const person1 = {
+  name: "홍길동",
+  age: 30,
+  job: "Manager",
+  sayHi: function () {
+    console.log("안녕하세요! " + this.name + "입니다.");
+  },
+};
+const person2 = {
+  name: "김철수",
+  age: 25,
+  job: "Designer",
+  sayHi: function () {
+    console.log("안녕하세요! " + this.name + "입니다.");
+  },
+};
+console.log(person1.name);
+console.log(person2.age);
+person1.sayHi();
+person2.sayHi();
