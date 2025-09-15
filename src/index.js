@@ -6,11 +6,10 @@ let person = {
   height: 180,
 };
 
-// Object.values(person) : 객체의 value값을 배열형태로 반환
-console.log(Object.values(person));
+// Object.entries(person) : 객체의 key와 value 쌍을 배열형태로 반환
+console.log(Object.entries(person));
 
-let newArray = Object.values(person);
+let newArray = Object.entries(person);
 for (let i = 0; i < newArray.length; i++) {
-  let nowValue = newArray[i];
-  console.log(`value: ${nowValue}`);
+  console.log(`key: ${newArray[i][0]}, value: ${newArray[i][1]}`);
 }
