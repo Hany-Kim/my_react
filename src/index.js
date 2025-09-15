@@ -1,8 +1,6 @@
-// 반복문 - for문
-for (let i = 1; i < 6; i++) {
-  console.log(i);
-}
+// 반복문 - while문
 
-for (let i = 5; i >= 0; i--) {
-  console.log(i);
+let i = 1;
+while (i < 6) {
+  console.log(i++);
 }
