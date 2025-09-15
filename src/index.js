@@ -1,7 +1,15 @@
-// 배열 수정
-const animal = ["cat", "dog", "hamster"];
+// 배열 삭제
+const colors = ["purple", "skyblue", "green"];
+colors.pop(); // -> 뒤에서 삭제
 
-//animal = ["cat", "rabbit", "hamster"]; // -> 에러 발생, index.js:4 Uncaught TypeError: Assignment to constant variable. at index.js:4:8
-animal[2] = "parrot"; // -> 통과
+console.log(colors); // (2) ['purple', 'skyblue']
 
-console.log(animal); //
+colors.shift(); // -> 앞에서 삭제
+
+console.log(colors); // ['skyblue']
+
+const colors1 = ["purple", "skyblue", "green", "yellow", "orange"];
+// colors1.splice(start, deleteCnt);
+colors1.splice(1, 3);
+console.log(colors1); // ['purple', 'orange']
+console.log(colors1.length); // 2
