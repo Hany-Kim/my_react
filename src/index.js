@@ -1,7 +1,7 @@
 // 배열 수정
-let animal = ["cat", "dog", "hamster"];
+const animal = ["cat", "dog", "hamster"];
 
-animal = ["cat", "rabbit", "hamster"];
-animal[2] = "parrot";
+//animal = ["cat", "rabbit", "hamster"]; // -> 에러 발생, index.js:4 Uncaught TypeError: Assignment to constant variable. at index.js:4:8
+animal[2] = "parrot"; // -> 통과
 
-console.log(animal); // (3) ['cat', 'rabbit', 'parrot']
+console.log(animal); //
