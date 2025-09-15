@@ -1,18 +1,18 @@
-// 객체의 속성 삭제방법 : 점 표기법, 괄호 표기법
+// 배열
+// : 순서가 있는 요소들의 집합, 여러개의 데이터가 모인 리스트
 
-const cat = { age: 2, name: "야옹이", color: "white" };
-delete cat.color;
-delete cat["age"];
+// 배열 생성 방법
+// 1. 생성자 함수
+// 2. 리터럴
 
-console.log(cat); // {name: '야옹이'}
+// 생성자 함수
+let arr1 = new Array(1, 2, 3);
+let arr2 = new Array(3); // 길이가 3인 비어있는 배열
+console.log(arr1); // [1, 2, 3]
+console.log(arr2); // [비어 있음 × 3]
 
-const person = {
-  name: "홍길동",
-  age: 23,
-  print: function () {
-    console.log("제 이름은 ${this.name}입니다. ");
-  },
-};
-
-person.print();
-person["print"]();
+// 리터럴
+let arr3 = [1, 2, 3];
+let arr4 = [3];
+console.log(arr3); // [1, 2, 3]
+console.log(arr4); // [3]
