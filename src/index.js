@@ -1,6 +1,5 @@
 // 배열 내장 함수
-
-// find 메서드 : 찾아낸 값의 인덱스가 아닌, 값 그자체를 리턴
+// 배열에서 특정 조건을 만족하는 값들만 추철 (필터링)
 
 let colors = [
   { id: 1, color: "green" },
@@ -8,6 +7,5 @@ let colors = [
   { id: 3, color: "purple" },
 ];
 
-let idx = colors.find((elm) => elm.color === "purple");
-
-console.log(idx); // {id: 3, color: 'purple'}
+let filterArray = colors.filter((elm, idx, arrya) => elm.id > 1);
+console.log(filterArray); // { id: 2, color: "blue" }, { id: 3, color: "purple" }
