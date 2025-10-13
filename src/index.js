@@ -1,7 +1,17 @@
-// 반복문 - for-of문
-// 모든 요소에 접근할 때 사용
+// 반복문 - for-in문
+// 객체의 모든 프로퍼티 참조
 
-let arr = [1, 2, 3, 4, 5];
-for (let i of arr) {
-  console.log(i);
+let person = {
+  name: "홍길동",
+  age: 25,
+  height: 180,
+};
+
+for (let key in person) {
+  console.log(`key ${key}, value : ${person[key]}`);
 }
+
+// 출력
+// key name, value : 홍길동
+// key age, value : 25
+// key height, value : 180
