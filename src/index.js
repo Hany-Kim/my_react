@@ -1,30 +1,28 @@
 // 배열 내장 함수
 
-let colors = ["green", "blue", "purple"];
-colors.sort(); // 오름 차순
+let numbers = [1, 100, 25, 50];
+let sum = 0;
 
-console.log(colors); // ['blue', 'green', 'purple']
+// 누적합
+numbers.forEach((elm) => {
+  sum += elm;
+});
 
-const compare = (a, b) => {
-  if (a > b) return -1;
-  else if (a < b) return 1;
-  else return 0;
-};
-colors.sort(compare);
-console.log(colors); // ['purple', 'green', 'blue']
+console.log(sum); // 176
 
-let numbers = [1, 100, 25, 50, 120, 3];
-numbers.sort();
-console.log(numbers); // [1, 100, 120, 25, 3, 50] -> 수비교가 아닌, 사전 순으로 정렬됨
+// acc : 콜백함수 반환값 누적
+// cur : 현재 처리할 요소 값
+// idx : 처리한 현재 요소의 인덱스
+let reduceSum = numbers.reduce((acc, cur, idx) => {
+  console.log(acc, cur, idx);
+  return acc + cur;
+}, 0);
 
-const compareNum1 = (a, b) => {
-  return a - b;
-};
-numbers.sort(compareNum1);
-console.log(numbers); // [1, 3, 25, 50, 100, 120] -> 수비교가 아닌, 사전 순으로 정렬됨
+console.log(reduceSum); // 176
 
-const compareNum2 = (a, b) => {
-  return b - a;
-};
-numbers.sort(compareNum2);
-console.log(numbers); // [120, 100, 50, 25, 3, 1] -> 수비교가 아닌, 사전 순으로 정렬됨
+let reduceSum1 = numbers.reduce((acc, cur, idx) => {
+  console.log(acc, cur, idx);
+  return acc + cur;
+}, 10);
+
+console.log(reduceSum1); // 186
