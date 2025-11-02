@@ -1,8 +1,20 @@
-// spread (확산, 퍼짐, 전파)
-// : 특정 배열의 원소나 객체의 프로퍼티 값을 펼침
-const color1 = ["red", "orance", "yellow"];
-const color2 = ["blue", "navy", "purple"];
+// rest (나머지 매개변수)
+// 특정 부분들을 하나의 객체나 배열로 묶어줌.
 
-const rainbow = [...color1, "green", ...color2];
+const blueToy = {
+  type: "bear",
+  price: 15000,
+  color: "blue",
+};
 
-console.log(rainbow); // ['red', 'orance', 'yellow', 'green', 'blue', 'navy', 'purple']
+// const { type, price, color } = blueToy;
+const { type, ...rest } = blueToy;
+
+// const { ...rest, type } = blueToy;
+//  rest문법은 spread와 다르게 순서에 상관없이 여러번 작성할 수 없고
+// 항상 맨 마지막에 작성해야 한다.
+
+console.log(type);
+// console.log(price);
+// console.log(color);
+console.log(rest); // {price: 15000, color: 'blue'}
