@@ -14,8 +14,12 @@ const delay = (ms) => {
 // async를 사용하면 해당 함수는 항상 Promise객체를 반환
 // await은 async함수를 작성한 내부에서 사용
 const start = async () => {
-  let result = await delay(3000);
-  console.log(result);
+  try {
+    let result = await delay(3000);
+    console.log(result);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 start();
