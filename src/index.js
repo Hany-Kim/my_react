@@ -1,53 +1,19 @@
-// 프로미스 객체
-// 콜백 지옥
+// async와 await
+// 프로미스 객체를 더욱 쉽게 사용할 수 있도록 도와줌
 
-const workA = (value) => {
-  const promise = new Promise((resolve) => {
+const delay = (ms) => {
+  return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(value + 5);
-    }, 5000);
+      resolve("3초가 지났습니다.");
+    }, ms);
   });
-  return promise;
-};
-const workB = (value) => {
-  const promise = new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(value - 3);
-    }, 3000);
-  });
-  return promise;
 };
 
-const workC = (value) => {
-  const promise = new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(value + 10);
-    }, 10000);
+// async와 await 사용 X
+const start = () => {
+  delay(3000).then((result) => {
+    console.log(result);
   });
-  return promise;
 };
 
-// 프로미스 객체를 사용했지만 여전히 콜백지옥 형태와 유사
-// workA(10).then((resA) => {
-//   console.log(`workA : ${resA}`);
-//   workB(resA).then((resB) => {
-//     console.log(`workB : ${resB}`);
-//     workC(resB).then((resC) => {
-//       console.log(`workC : ${resC}`);
-//     });
-//   });
-// });
-
-// 프로미스 체이닝
-workA(10)
-  .then((resA) => {
-    console.log(`workA : ${resA}`);
-    return workB(resA);
-  })
-  .then((resB) => {
-    console.log(`workB : ${resB}`);
-    return workC(resB);
-  })
-  .then((resC) => {
-    console.log(`workC : ${resC}`);
-  });
+start();
