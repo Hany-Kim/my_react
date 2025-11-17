@@ -1,5 +1,12 @@
-let $name = document.getElementById("name");
-$name.className = "dog-name";
+let $animalInfo = document.querySelector("div.animal-info");
+$animalInfo.id = "animal";
 
-console.log($name); // <div class="dog-name" id="name">강아지</div>
-console.log($name.className); // index.js:5 dog-name
+console.log($animalInfo);
+{
+  /* <div class="animal-info" id="animal">
+  <div class="info-item" id="name">강아지</div>
+  <div class="info-item" id="color">갈색</div>
+  <div class="info-item" id="age">2살</div>
+</div> */
+}
+console.log($animalInfo.id); // animal
