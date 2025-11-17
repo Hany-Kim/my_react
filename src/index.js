@@ -1,11 +1,12 @@
-// querySelector : getElementById처럼 단 하나 요소 반환
+// querySelectorAll : 전달받은 class이름을 가진 여러 요소를 찾아 반환
+// getElementsByClassName : class이름만으로 여러 요소를 반환
+// getElementsByTagName : 특정 Html 태그로 이루어진 모든 요소들을 반호나
 
-let $animalInfo = document.querySelector("div.animal-info"); // 요소들 중 class명을 통해 특정요소를 찾을 때 -> .
-let ageElement = document.querySelector("div#age"); // 요소들 중 id명을 통해 특정요소를 찾을 때 -> #
-console.log($animalInfo);
-// <div class="animal-info">
-//   <div id="name">강아지</div>
-//   <div id="color">갈색</div>
-//   <div id="age">2살</div>
-// </div>
-console.log(ageElement); // <div id="age">2살</div>
+let $infoItem1 = document.querySelectorAll("div.info-item");
+console.log($infoItem1);
+
+let $infoItem2 = document.getElementsByClassName("info-item");
+console.log($infoItem2);
+
+let $infoItem3 = document.getElementsByTagName("div");
+console.log($infoItem3);
