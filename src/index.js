@@ -1,4 +1,5 @@
-let $age = document.getElementById("age");
-$age.textContent = "5살";
+let $color = document.getElementById("color");
+$color.style.color = "blue";
+$color.style.fontSize = "30px";
 
-console.log($age); // <div class=​"info-item" id=​"age">​5살​</div>​
+console.log($color); // <div class="info-item" id="color" style="color: blue; font-size: 30px;">갈색</div>
