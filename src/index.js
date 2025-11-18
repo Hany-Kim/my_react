@@ -1,20 +1,14 @@
-// createElement : 새로운 요소 생성
+// 버튼과 addEventListener
 
-let $type = document.createElement("div");
-$type.className = "info-item";
-$type.id = "type";
+let $button = document.createElement("button");
+$button.id = "new-button";
+$button.classList.add("new-button");
+$button.textContent = "버튼";
+$button.addEventListener("click", () => {
+  window.alert("클릭");
+});
 
-// 방법 1
-// $type.textContent = "말티즈";
-// console.log($type); // <div class=​"info-item" id=​"type">​말티즈​</div>​
-
-// 방법 2
-let $typeText = document.createTextNode("말티즈");
-console.log($type); // <div class=​"info-item" id=​"type"></div>​
-console.log($typeText); // 말티즈
-
-// appendChild : 요소 추가
 let $animalInfo = document.querySelector("div.animal-info");
-$animalInfo.appendChild($type);
-$type.appendChild($typeText);
-console.log($type); // <div class=​"info-item" id=​"type">​말티즈​</div>
+$animalInfo.appendChild($button);
+
+console.log($animalInfo);
